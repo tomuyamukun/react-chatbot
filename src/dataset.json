@@ -1,0 +1,124 @@
+{
+	"init": {
+		"answers": [
+			{ "content": "おすすめの本教えて", "nextId": "book" },
+			{
+				"content": "youtube教えて",
+				"nextId": "douga"
+			},
+			{ "content": "オンラインサロンについて知りたい", "nextId": "community" },
+			{ "content": "ちょっと聞きたいことがある", "nextId": "dating" }
+		],
+		"question": "こんにちは本日の要件を教えて下さい"
+	},
+	"book": {
+		"answers": [
+			{ "content": "ファンタジー", "nextId": "kimetsu" },
+			{ "content": "ラブコメ", "nextId": "loveComedy" },
+			{ "content": "日常もの", "nextId": "nichijo" },
+			{ "content": "その他", "nextId": "others" }
+		],
+		"question": "ジャンルはどれがいい？"
+	},
+	"kimetsu": {
+		"answers": [
+			{ "content": "鬼滅の刃", "nextId": "https://amzn.to/2MmI6cB" },
+			{ "content": "最初の質問に戻る", "nextId": "init" }
+		],
+		"question": "今流行っているのはこれです"
+	},
+	"loveComedy": {
+		"answers": [
+			{ "content": "僕らはみんな河合荘", "nextId": "https://amzn.to/2WZ8knA" },
+			{ "content": "魔法使いの嫁", "nextId": "https://amzn.to/3pJWPwu" },
+			{ "content": "月刊少女野崎くん", "nextId": "https://amzn.to/384e4CQ" },
+			{ "content": "最初の質問に戻る", "nextId": "init" }
+		],
+		"question": "これなんてどう？"
+	},
+	"nichijo": {
+		"answers": [
+			{ "content": "ゆるきゃん△", "nextId": "https://amzn.to/2KWjzeb" },
+			{ "content": "放課後ていぼう日誌", "nextId": "https://amzn.to/2X01yOj" },
+			{ "content": "ハクメイとミコチ", "nextId": "https://amzn.to/2X3XtJe" },
+			{ "content": "最初の質問に戻る", "nextId": "init" }
+		],
+		"question": "日常物か、このへんいいよ"
+	},
+	"others": {
+		"answers": [
+			{ "content": "MIX", "nextId": "https://amzn.to/3rOl6mY" },
+			{ "content": "こういうのないの？", "nextId": "contact" },
+			{ "content": "最初の質問に戻る", "nextId": "init" }
+		],
+		"question": "適当にえらんでみたよ。"
+	},
+	"douga": {
+		"answers": [
+			{
+				"content": "YouTubeを開く",
+				"nextId": "https://youtube.com"
+			},
+			{ "content": "私はおすすめを聞いている？", "nextId": "channel" },
+			{ "content": "最初の質問に戻る", "nextId": "init" }
+		],
+		"question": " とりあえずYouTube開いて見ようか。"
+	},
+	"channel": {
+		"answers": [
+			{
+				"content": "キリン【考察系youtuber】",
+				"nextId": "https://www.youtube.com/channel/UCZ6AXSKWO2AIi5RkSRlPP2A"
+			},
+			{ "content": "もっと他にない？", "nextId": "moreChannel" },
+			{ "content": "最初の質問に戻る", "nextId": "init" }
+		],
+		"question": "ちょっとした時間つぶしにぴったり。"
+	},
+	"moreChannel": {
+		"answers": [
+			{
+				"content": "朝倉未来 Mikuru Asakura",
+				"nextId": "https://www.youtube.com/channel/UCJZVj2iBrdvbNc416i0V-UA"
+			},
+			{
+				"content": "酒桜",
+				"nextId": "https://www.youtube.com/channel/UCtTzAeUzuCKihDS1BECX9QA"
+			},
+			{ "content": "最初の質問に戻る", "nextId": "init" }
+		],
+		"question": "よく見ているのはこのへんかな。"
+	},
+	"community": {
+		"answers": [
+			{
+				"content": "どんなことをしているの？",
+				"nextId": "challenge"
+			},
+			{
+				"content": "サロンを覗く",
+				"nextId": "https://it-kingdom.com/"
+			},
+			{ "content": "最初の質問に戻る", "nextId": "init" }
+		],
+		"question": "自分がプログラミングの勉強するのに入ったサロンです。仲間と一緒に勉強したり色々プロダクトを作ります。"
+	},
+	"challenge": {
+		"answers": [
+			{
+				"content": "サロンを覗く",
+				"nextId": "https://it-kingdom.com/"
+			},
+			{ "content": "最初の質問に戻る", "nextId": "init" }
+		],
+		"question": "サロンの主が動画で講座を行ったり、メンバーで集まって勉強したり、色々情報の発信、収集も可能です"
+	},
+
+	"dating": {
+		"answers": [
+			{ "content": "DMする", "nextId": "https://twitter.com/tomotomochande" },
+			{ "content": "最初の質問に戻る", "nextId": "init" }
+		],
+		"question": "ご用件はDMでお願いします"
+	}
+}
