@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+# アプリ名
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+chat-bot
 
-## Available Scripts
+# 概要
 
-In the project directory, you can run:
+会話形式で選択肢を選んでいき、ジャンルごとにリンク先へ飛んでいくチャットボット
 
-### `yarn start`
+# 本番環境
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+https://chatbot-296c1.web.app/
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+# 制作背景
 
-### `yarn test`
+会話形式のボットを作成することで、あるサービスに対して 24 時間対応が可能になる
+とういう点で利便性があるということで作成しました、今回の選択肢は自分の趣味や
+サロンの紹介につかいましたが、中身は自由に変更して利用できるのが利点です。
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# DEMO
 
-### `yarn build`
+### 挙動
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![demo](https://gyazo.com/d1b6e41cf9e0082cbcee5d0d53a588ed.gif)
+下の選択肢を選ぶとまた別の選択肢が現れ選択することで進んでいく会話形式のボットです
+商品だったり、youtube のページだったり、DM を送る twitter のページ等につながっています。
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### お問い合わせフォーム
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![外部リンク](https://gyazo.com/b2e931317bdc9749dc381677e6d58e82.gif)
+問い合わせを選択することで入力フォームが出現します必要事項を記入して送信すると自分の slack のチャンネルに通知が来るようになっています。
 
-### `yarn eject`
+# 使用技術（開発環境）
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## フロントエンド
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+React, JavaScript, CSS,
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## データベース
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Cloud Firestore
 
-## Learn More
+## サーバー
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Firebase
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## ソース管理
 
-### Code Splitting
+GitHub, GitHubDesktop
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## エディタ
 
-### Analyzing the Bundle Size
+VSCode
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 今後実装したい機能
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+今回実装したのはルールベース型のチャットボットなので AI 型のチャットボットを作成したい

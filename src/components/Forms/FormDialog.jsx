@@ -28,7 +28,7 @@ const FormDialog = (props) => {
 
 	const inputDescription = useCallback(
 		(event) => {
-			this.setState(event.target.value);
+			setDescription(event.target.value);
 		},
 		[setDescription]
 	);
@@ -48,7 +48,7 @@ const FormDialog = (props) => {
 				description,
 		};
 		const url =
-			"https://hooks.slack.com/services/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";
+			"https://hooks.slack.com/services/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";
 
 		fetch(url, {
 			method: "POST",
@@ -79,7 +79,7 @@ const FormDialog = (props) => {
 						rows={1}
 						value={name}
 						type={"text"}
-						onChange={name}
+						onChange={inputName}
 					/>
 					<TextInput
 						label={"メールアドレス（必須）"}
@@ -87,7 +87,7 @@ const FormDialog = (props) => {
 						rows={1}
 						value={email}
 						type={"email"}
-						onChange={email}
+						onChange={inputEmail}
 					/>
 					<TextInput
 						label={"お問い合わせ（必須）"}
@@ -95,7 +95,7 @@ const FormDialog = (props) => {
 						rows={5}
 						value={description}
 						type={"text"}
-						onChange={description}
+						onChange={inputDescription}
 					/>
 				</DialogContentText>
 			</DialogContent>

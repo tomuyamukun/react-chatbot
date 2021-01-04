@@ -109,6 +109,7 @@
 				"content": "サロンを覗く",
 				"nextId": "https://it-kingdom.com/"
 			},
+			{ "content": "問い合わせる", "nextId": "contact" },
 			{ "content": "最初の質問に戻る", "nextId": "init" }
 		],
 		"question": "サロンの主が動画で講座を行ったり、メンバーで集まって勉強したり、色々情報の発信、収集も可能です"
