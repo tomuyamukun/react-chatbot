@@ -6,6 +6,7 @@ import DialogContent from "@material-ui/core/DialogContent";
 import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import TextInput from "./TextInput";
+import dotenv from "dotenv";
 
 const FormDialog = (props) => {
 	const [name, setName] = useState("");
@@ -47,8 +48,7 @@ const FormDialog = (props) => {
 				"問い合わせ内容" +
 				description,
 		};
-		const url =
-			"https://hooks.slack.com/services/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";
+		const url = process.env.REACT_APP_API_KEY;
 
 		fetch(url, {
 			method: "POST",

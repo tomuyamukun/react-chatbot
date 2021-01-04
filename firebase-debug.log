@@ -1,0 +1,149 @@
+[debug] [2021-01-04T08:34:28.195Z] ----------------------------------------------------------------------
+[debug] [2021-01-04T08:34:28.197Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2021-01-04T08:34:28.197Z] CLI Version:   9.1.0
+[debug] [2021-01-04T08:34:28.197Z] Platform:      darwin
+[debug] [2021-01-04T08:34:28.197Z] Node Version:  v14.15.3
+[debug] [2021-01-04T08:34:28.203Z] Time:          Mon Jan 04 2021 17:34:28 GMT+0900 (日本標準時)
+[debug] [2021-01-04T08:34:28.203Z] ----------------------------------------------------------------------
+[debug] [2021-01-04T08:34:28.203Z] 
+[debug] [2021-01-04T08:34:28.209Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-01-04T08:34:28.209Z] > authorizing via signed-in user
+[debug] [2021-01-04T08:34:28.209Z] [iam] checking project chatbot-296c1 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-01-04T08:34:28.211Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-01-04T08:34:28.212Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-01-04T08:34:28.528Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Mon, 04 Jan 2021 08:34:28 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-01-04T08:34:28.561Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/chatbot-296c1:testIamPermissions  
+ {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2021-01-04T08:34:29.486Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 04 Jan 2021 08:34:29 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=562","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-01-04T08:34:29.487Z] >>> HTTP REQUEST POST https://iam.googleapis.com/v1/projects/chatbot-296c1/serviceAccounts/chatbot-296c1@appspot.gserviceaccount.com:testIamPermissions  
+ {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2021-01-04T08:34:30.216Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 04 Jan 2021 08:34:30 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-01-04T08:34:30.217Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/chatbot-296c1  
+ 
+[debug] [2021-01-04T08:34:31.575Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 04 Jan 2021 08:34:31 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] === Deploying to 'chatbot-296c1'...
+[info] 
+[info] i  deploying firestore, functions, hosting 
+[info] Running command: npm --prefix "$RESOURCE_DIR" run lint
+[info] Running command: npm --prefix "$RESOURCE_DIR" run build
+[info] ✔  functions: Finished running predeploy script. 
+[info] i  firestore: reading indexes from firestore.indexes.json... 
+[info] i  cloud.firestore: checking firestore.rules for compilation errors... 
+[debug] [2021-01-04T08:34:41.949Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/chatbot-296c1:test  
+ {"source":{"files":[{"name":"firestore.rules","content":"service cloud.firestore {\n  match /databases/{database}/documents {\n    match /{document=**} {\n      // This rule allows anyone with your database reference to view, edit,\n      // and delete all data in your database. It is useful for getting\n      // started, but it is configured to expire after 30 days because it\n      // leaves your app open to attackers. At that time, all client\n      // requests to your database will be denied.\n      //\n      // Make sure to write security rules for your app before that time, or\n      // else all client requests to your database will be denied until you\n      // update your rules.\n      allow read;\n      allow write: if request.auth.uid != null;\n    }\n  }\n}\n"}]}}
+[debug] [2021-01-04T08:34:43.785Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 04 Jan 2021 08:34:43 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[warn] ⚠  [W] undefined:undefined - Ruleset uses old version (version [1]). Please update to the latest version (version [2]). 
+[info] ✔  cloud.firestore: rules file firestore.rules compiled successfully 
+[debug] [2021-01-04T08:34:43.787Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint \"src/**/*\"",
+    "build": "tsc",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "12"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^9.2.0",
+    "firebase-functions": "^3.11.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^3.9.1",
+    "@typescript-eslint/parser": "^3.8.0",
+    "eslint": "^7.6.0",
+    "eslint-plugin-import": "^2.22.0",
+    "typescript": "^3.8.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[debug] [2021-01-04T08:34:44.738Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/chatbot-296c1/services/cloudfunctions.googleapis.com  
+ 
+[debug] [2021-01-04T08:34:44.738Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/chatbot-296c1/services/runtimeconfig.googleapis.com  
+ 
+[debug] [2021-01-04T08:34:44.738Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/chatbot-296c1/services/cloudbuild.googleapis.com  
+ 
+[debug] [2021-01-04T08:34:46.062Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 04 Jan 2021 08:34:45 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] ✔  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2021-01-04T08:34:46.066Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 04 Jan 2021 08:34:45 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] ✔  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2021-01-04T08:34:46.112Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 04 Jan 2021 08:34:46 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-01-04T08:34:46.112Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/chatbot-296c1/adminSdkConfig  
+ 
+[debug] [2021-01-04T08:34:46.995Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 04 Jan 2021 08:34:46 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-01-04T08:34:46.998Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/chatbot-296c1/versions  
+ {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2021-01-04T08:34:48.722Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 04 Jan 2021 08:34:48 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-01-04T08:34:48.727Z] >>> HTTP REQUEST GET https://firebaserules.googleapis.com/v1/projects/chatbot-296c1/releases?pageSize=10&pageToken=  
+ 
+[debug] [2021-01-04T08:34:48.727Z] >>> HTTP REQUEST GET https://firestore.googleapis.com/v1/projects/chatbot-296c1/databases/(default)/collectionGroups/-/indexes  
+ 
+[debug] [2021-01-04T08:34:49.317Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 04 Jan 2021 08:34:49 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-01-04T08:34:49.318Z] >>> HTTP REQUEST GET https://firestore.googleapis.com/v1/projects/chatbot-296c1/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false  
+ 
+[debug] [2021-01-04T08:34:49.967Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 04 Jan 2021 08:34:49 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] ✔  firestore: deployed indexes in firestore.indexes.json successfully 
+[debug] [2021-01-04T08:34:50.102Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 04 Jan 2021 08:34:49 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-01-04T08:34:50.104Z] >>> HTTP REQUEST GET https://firebaserules.googleapis.com/v1/projects/chatbot-296c1/rulesets/ec91e915-030e-4e61-9acd-ef5ae7b55144  
+ 
+[debug] [2021-01-04T08:34:51.503Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 04 Jan 2021 08:34:51 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  firestore: latest version of firestore.rules already up to date, skipping upload... 
+[info] i  functions: preparing functions directory for uploading... 
+[debug] [2021-01-04T08:34:51.505Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/chatbot-296c1/configs  
+ 
+[debug] [2021-01-04T08:34:52.321Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 04 Jan 2021 08:34:52 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  functions: packaged functions (43.72 KB) for uploading 
+[debug] [2021-01-04T08:34:52.813Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/projects/chatbot-296c1/locations/-/functions  
+ 
+[debug] [2021-01-04T08:34:54.677Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 04 Jan 2021 08:34:54 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-01-04T08:34:54.679Z] >>> HTTP REQUEST POST https://cloudfunctions.googleapis.com/v1/projects/chatbot-296c1/locations/us-central1/functions:generateUploadUrl  
+ 
+[debug] [2021-01-04T08:34:56.520Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 04 Jan 2021 08:34:56 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-01-04T08:34:56.520Z] >>> HTTP REQUEST PUT https://storage.googleapis.com/gcf-upload-us-central1-8553e1ca-27e6-4e64-8c9d-0a4b5caac8b0/41fe72f7-f77e-43cf-8c00-27617e54251f.zip?GoogleAccessId=service-656282972742@gcf-admin-robot.iam.gserviceaccount.com&Expires=1609751096&Signature=ftktGVgUkVHeOsin8ObhJx6dzxvvNHEnGDKj01q0J%2Frl%2FgMkoeWPgO8PX9wcyoB8WD5wW2xoJ2ZSmdYsMau0d%2For0CiHZg4dvyUTsWLJf0M2Iie9OlC6FhvlhmbVySHBjp5GpADv4XECRmfJ5wVJVfCfOJIIaO6kVL94Ltya3R8L%2F%2BadcHQHKJAESa2WFVhVbHLHdw9Eqew0VtAzOUCgRvXfaU067i5kkkIBojBjbT9xETMUzVfH73eC1355rwq9RngSe25IxFwAhKzgqMEuAwIaIlAFI5TJxA9dTKo4wXbHQZkhbfyLLr81O8RMizmN%2B7VtHFxRYKwSDTRXDbB4%2FQ%3D%3D  
+ <request body omitted>
+[debug] [2021-01-04T08:34:57.339Z] <<< HTTP RESPONSE 200 {"x-guploader-uploadid":"ABg5-Uwo3cgDIUv_9xKzKo29HUorah8T0Ki5g-6OoSRRFdyx9Nq5gnS3LFLV3wmhIdHyNs0FkqZYeslIRF3t2-CTcZNQDo9yRQ","etag":"\"d922b2f7a8633193a072b37e1dba9241\"","x-goog-generation":"1609749297185335","x-goog-metageneration":"1","x-goog-hash":"crc32c=/0WYcA==, md5=2SKy96hjMZOgcrN+HbqSQQ==","x-goog-stored-content-length":"44767","x-goog-stored-content-encoding":"identity","vary":"Origin","content-length":"0","date":"Mon, 04 Jan 2021 08:34:57 GMT","server":"UploadServer","content-type":"text/html; charset=UTF-8","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""}
+[info] ✔  functions: functions folder uploaded successfully 
+[info] i  hosting[chatbot-296c1]: beginning deploy... 
+[info] i  hosting[chatbot-296c1]: found 20 files in build 
+[debug] [2021-01-04T08:34:57.681Z] > refreshing access token with scopes: []
+[debug] [2021-01-04T08:34:57.681Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-01-04T08:34:57.682Z] [hosting] hash cache [YnVpbGQ] stored for 20 files
+[debug] [2021-01-04T08:34:57.682Z] [hosting][hash queue][FINAL] {"max":326,"min":8,"avg":27.1,"active":0,"complete":20,"success":20,"errored":0,"retried":0,"total":20,"elapsed":331}
+[debug] [2021-01-04T08:34:57.984Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","date":"Mon, 04 Jan 2021 08:34:57 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-01-04T08:34:58.014Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/sites/chatbot-296c1/versions/9cdeb1cbbe5718d5:populateFiles [none]
+[debug] [2021-01-04T08:34:58.014Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/sites/chatbot-296c1/versions/9cdeb1cbbe5718d5:populateFiles {"files":{"/asset-manifest.json":"2bf29438d0b7839e38ca118119706deed618f06250ecad2acd5626d5fab5065a","/index.html":"89e33e8b81ac959fd3e4fafae977c575b880aa3fec5edec030ee4b64629bf6a3","/static/css/main.ac9dd104.chunk.css":"3c8be17da2f5ea894c495dd5e0a091c4e1dd78590d247c5a57102a6a5ee437d3","/favicon.ico":"b72f7455f00e4e58792d2bca892abb068e2213838c0316d6b7a0d6d16acd1955","/logo192.png":"caff018b7f1e8fd481eb1c50d75b0ef236bcd5078b1d15c8bb348453fee30293","/static/css/main.ac9dd104.chunk.css.map":"f3f00b2c6d152fedd00a400ab7974b00bcac1b908e237569596918afe6833b88","/static/js/2.7547a113.chunk.js.LICENSE.txt":"173589c867ecb8de7e60d00207650b0892704a2179eb1a4a6c0b6eec8a0a5a64","/static/js/3.09efb036.chunk.js":"1ff47e24129bfa4f25faf8f60e8cfec8a3bc864cd746f63da0784714f7efeb8e","/static/js/3.09efb036.chunk.js.map":"d03a85a4ebf33062250619c4ad6b88c64f4ef6163b548fc35baafee4715c6eea","/static/js/main.067f34ef.chunk.js":"23ca643933935f7a4ee58632e18684beb7a943cf8314f5f998a28fc031b56492","/manifest.json":"341d52628782f8ac9290bbfc43298afccb47b7cbfcee146ae30cf0f46bc30900","/static/js/runtime-main.ea754ee7.js":"d636fe906f2ca1a3c5d60284a4eb32e14122368269e51896d840ab6510541107","/robots.txt":"391d14b3c2f8c9143a27a28c7399585142228d4d1bdbe2c87ac946de411fa9a2","/static/js/runtime-main.ea754ee7.js.map":"d517493dc300ad58770a718dcd0dc0312847366c216ed6a2ed06321bf07abbe2","/static/js/main.067f34ef.chunk.js.map":"f8ab8e2f1a4a1da1bc296364b369bdf627585594319921458e6be1ddf4930ae6","/logo512.png":"191fc21360b4ccfb1cda11a1efb97f489ed22672ca83f4064316802bbfdd750e","/static/media/no-profile.67b6df19.png":"c78dbb86a95e8a303abea67da25f4f9ba4cfa8204e90e03ee55811cf316b1de4","/static/media/entertainment_comic.5467b363.png":"23f7f19a97c4d83d33785fa22d4399e22d1a90cb7c346558c8c394d9706031ed","/static/js/2.7547a113.chunk.js":"2fa7112191f9ed1d351d0b54335ac3eeb7f67e30e61cf6c69b9c63ed6f8c53d6","/static/js/2.7547a113.chunk.js.map":"08aa1ec5500962822ca59cb21c2718a49e37e80e7d02d7c03a9c2dee9bdd9d27"}}
+[debug] [2021-01-04T08:34:59.342Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/sites/chatbot-296c1/versions/9cdeb1cbbe5718d5:populateFiles 200
+[debug] [2021-01-04T08:34:59.342Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/sites/chatbot-296c1/versions/9cdeb1cbbe5718d5:populateFiles {"uploadRequiredHashes":["1ff47e24129bfa4f25faf8f60e8cfec8a3bc864cd746f63da0784714f7efeb8e","23ca643933935f7a4ee58632e18684beb7a943cf8314f5f998a28fc031b56492","08aa1ec5500962822ca59cb21c2718a49e37e80e7d02d7c03a9c2dee9bdd9d27","d517493dc300ad58770a718dcd0dc0312847366c216ed6a2ed06321bf07abbe2","2fa7112191f9ed1d351d0b54335ac3eeb7f67e30e61cf6c69b9c63ed6f8c53d6","89e33e8b81ac959fd3e4fafae977c575b880aa3fec5edec030ee4b64629bf6a3","d03a85a4ebf33062250619c4ad6b88c64f4ef6163b548fc35baafee4715c6eea","f8ab8e2f1a4a1da1bc296364b369bdf627585594319921458e6be1ddf4930ae6","d636fe906f2ca1a3c5d60284a4eb32e14122368269e51896d840ab6510541107","2bf29438d0b7839e38ca118119706deed618f06250ecad2acd5626d5fab5065a"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/chatbot-296c1/versions/9cdeb1cbbe5718d5/files"}
+[debug] [2021-01-04T08:34:59.344Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/chatbot-296c1/versions/9cdeb1cbbe5718d5/files/1ff47e24129bfa4f25faf8f60e8cfec8a3bc864cd746f63da0784714f7efeb8e [none]
+[debug] [2021-01-04T08:34:59.344Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/chatbot-296c1/versions/9cdeb1cbbe5718d5/files/1ff47e24129bfa4f25faf8f60e8cfec8a3bc864cd746f63da0784714f7efeb8e [stream]
+[debug] [2021-01-04T08:34:59.346Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/chatbot-296c1/versions/9cdeb1cbbe5718d5/files/23ca643933935f7a4ee58632e18684beb7a943cf8314f5f998a28fc031b56492 [none]
+[debug] [2021-01-04T08:34:59.346Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/chatbot-296c1/versions/9cdeb1cbbe5718d5/files/23ca643933935f7a4ee58632e18684beb7a943cf8314f5f998a28fc031b56492 [stream]
+[debug] [2021-01-04T08:34:59.346Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/chatbot-296c1/versions/9cdeb1cbbe5718d5/files/08aa1ec5500962822ca59cb21c2718a49e37e80e7d02d7c03a9c2dee9bdd9d27 [none]
+[debug] [2021-01-04T08:34:59.347Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/chatbot-296c1/versions/9cdeb1cbbe5718d5/files/08aa1ec5500962822ca59cb21c2718a49e37e80e7d02d7c03a9c2dee9bdd9d27 [stream]
+[debug] [2021-01-04T08:34:59.347Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/chatbot-296c1/versions/9cdeb1cbbe5718d5/files/d517493dc300ad58770a718dcd0dc0312847366c216ed6a2ed06321bf07abbe2 [none]
+[debug] [2021-01-04T08:34:59.347Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/chatbot-296c1/versions/9cdeb1cbbe5718d5/files/d517493dc300ad58770a718dcd0dc0312847366c216ed6a2ed06321bf07abbe2 [stream]
+[debug] [2021-01-04T08:34:59.348Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/chatbot-296c1/versions/9cdeb1cbbe5718d5/files/2fa7112191f9ed1d351d0b54335ac3eeb7f67e30e61cf6c69b9c63ed6f8c53d6 [none]
+[debug] [2021-01-04T08:34:59.348Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/chatbot-296c1/versions/9cdeb1cbbe5718d5/files/2fa7112191f9ed1d351d0b54335ac3eeb7f67e30e61cf6c69b9c63ed6f8c53d6 [stream]
+[debug] [2021-01-04T08:34:59.351Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/chatbot-296c1/versions/9cdeb1cbbe5718d5/files/89e33e8b81ac959fd3e4fafae977c575b880aa3fec5edec030ee4b64629bf6a3 [none]
+[debug] [2021-01-04T08:34:59.351Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/chatbot-296c1/versions/9cdeb1cbbe5718d5/files/89e33e8b81ac959fd3e4fafae977c575b880aa3fec5edec030ee4b64629bf6a3 [stream]
+[debug] [2021-01-04T08:34:59.352Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/chatbot-296c1/versions/9cdeb1cbbe5718d5/files/d03a85a4ebf33062250619c4ad6b88c64f4ef6163b548fc35baafee4715c6eea [none]
+[debug] [2021-01-04T08:34:59.352Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/chatbot-296c1/versions/9cdeb1cbbe5718d5/files/d03a85a4ebf33062250619c4ad6b88c64f4ef6163b548fc35baafee4715c6eea [stream]
+[debug] [2021-01-04T08:34:59.353Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/chatbot-296c1/versions/9cdeb1cbbe5718d5/files/f8ab8e2f1a4a1da1bc296364b369bdf627585594319921458e6be1ddf4930ae6 [none]
+[debug] [2021-01-04T08:34:59.353Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/chatbot-296c1/versions/9cdeb1cbbe5718d5/files/f8ab8e2f1a4a1da1bc296364b369bdf627585594319921458e6be1ddf4930ae6 [stream]
+[debug] [2021-01-04T08:34:59.353Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/chatbot-296c1/versions/9cdeb1cbbe5718d5/files/d636fe906f2ca1a3c5d60284a4eb32e14122368269e51896d840ab6510541107 [none]
+[debug] [2021-01-04T08:34:59.353Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/chatbot-296c1/versions/9cdeb1cbbe5718d5/files/d636fe906f2ca1a3c5d60284a4eb32e14122368269e51896d840ab6510541107 [stream]
+[debug] [2021-01-04T08:34:59.354Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/chatbot-296c1/versions/9cdeb1cbbe5718d5/files/2bf29438d0b7839e38ca118119706deed618f06250ecad2acd5626d5fab5065a [none]
+[debug] [2021-01-04T08:34:59.354Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/chatbot-296c1/versions/9cdeb1cbbe5718d5/files/2bf29438d0b7839e38ca118119706deed618f06250ecad2acd5626d5fab5065a [stream]
+[debug] [2021-01-04T08:34:59.355Z] [hosting][populate queue][FINAL] {"max":1664,"min":1664,"avg":1664,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1675}
+[debug] [2021-01-04T08:34:59.355Z] [hosting] uploads queued: 10
